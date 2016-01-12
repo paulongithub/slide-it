@@ -1,7 +1,7 @@
 # slide-it
 A jquery widget plugin providing configurable slideshow functionality.
 
-Depends on jquery and the jquery-ui widget component. jQuery.Widget can be downloaded on its own. It works exactly as all other widgets. It has options and methods.
+Depends on jquery and the jquery-ui widget component. jQuery.Widget can be downloaded on its own. This plugin works exactly as all other jQuery widgets. It has options and methods.
 
 To use default settings, simply markup your slideshow with a container tag, and the slides as immediate children to that container. e.g. 
 
