@@ -19,11 +19,18 @@ To use default settings, simply markup your slideshow with a container tag, and 
  var slideShow = $('#slide-parent').slideit();
 ```
 
-If you wish to change an options after starting the slidshow, just use the restart method after changing the option, eg
+It's best to set all options upfront, ie pass in an options object to slideit() on initialisation. Otherwise you may have to call a function or functions for the change to take effect, e.g.:
 
 ```JavaScript
-slideShow.slideit('option','slideHide','slideUp');
+slideShow.slideit('option','delay','8000');
 slideShow.slideit('restart');
+```
+
+or
+```JavaScript
+slideShow.slideit('option','controlPanelBackground','#754');
+slideShow.slideit('removeControlPanel');
+slideShow.slideit('addControlPanel');
 ```
 
 Options (with default):
