@@ -41,7 +41,7 @@ Options (with default):
   * delay: 2000,
   * delayText:'Enter delay between cards in seconds',
   * ok:'Ok',
-  * selector:'' // if there are only specific children to the container you wish to target, and the selector to this option,
+  * selector:'' // if there are only specific children to the container you wish to target, add the selector to this option
   * slideHide:'fadeOut',
   * slideShow:'fadeIn',
   * slideChangeTime:1000
