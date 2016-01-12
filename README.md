@@ -29,7 +29,7 @@ slideShow.slideit('restart');
 or
 ```JavaScript
 slideShow.slideit('option','controlPanelBackground','#754');
-slideShow.slideit('removeControlPanel');
+slideShow.slideit('removeControlPanel'); //required if a control panel was already available
 slideShow.slideit('addControlPanel');
 ```
 
