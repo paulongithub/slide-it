@@ -22,7 +22,7 @@ To use default settings, simply markup your slideshow with a container tag, and 
 If you wish to change an options after starting the slidshow, just use the restart method after changing the option, eg
 
 ```JavaScript
-slideShow.slideit('option','controlPanel',true);
+slideShow.slideit('option','slideHide','slideUp');
 slideShow.slideit('restart');
 ```
 
