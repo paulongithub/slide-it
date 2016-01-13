@@ -5,6 +5,7 @@
             
             options: {
                 autoplay:true,
+                setContainerHeight: false,
                 controlPanel: false,
                 controlPanelBackground: '#777',
                 allowDelayChange : true,
@@ -21,6 +22,9 @@
                 
                 this.element.addClass(this._widgetClass);
                 this._getSlides();
+                
+                if (this.options.setContainerHeight)
+                    this.setContainerHeight();
                 
                 this._createControlPanelTemplates();
                 
@@ -380,6 +384,75 @@
                 if (type === 'controlPanel' && this.options.allowDelayChange) 
                     this._addControlPanel('delayControl');
                 
+            },
+            
+            setContainerHeight : function(){
+                
+                //reset container height responsively
+                function respond(){
+                    if (this.element.hasClass('slideit-container-responsive'))
+                        return;
+                    
+                    this.element.addClass('slideit-container-responsive');
+                    
+                    var app = this;
+                    
+                    $(window).on('resize',function(){
+                        app.setContainerHeight();
+                        
+                    });
+                }
+                
+                var container = this.element;
+                var slides = this._slides;
+                var app = this;
+        
+                slides.each(function(){
+                    
+                    var slide = $(this);
+                    
+                    //find first visible slide
+                    if (! slide.is(':visible'))
+                        return true;
+                    
+                    //is it an image
+                    var isAnImage = slide.is('img');
+                    
+                    //or does the slide contain an image? e.g. if slide is figure
+                    if (! isAnImage) {
+                        var image = slide.find('img').filter(':first');
+                        
+                        if (image.length) {
+                            slide = image;
+                            isAnImage = true;
+                        }
+                    }
+                    
+                    loaded = isAnImage === true ? slide.prop('complete') : true;
+                    
+                    //if a loaded image or standard element, set the height
+                    if (loaded) {
+                        var slideHeight = slide.height();
+                        app.element.height(slideHeight);
+                        respond.call(app);
+                        return false;
+                    }
+        
+                    //image is not loaded, listen for load event                    
+                    slide.on('load',function(){
+                        var imgheight = slide.height();
+                        
+                        app.element.height(imgheight);
+                        
+                        //remove event
+                        slide.off('load');
+                        
+                        respond.call(app);
+                    });
+                    
+                    return false;
+        
+                });
             }
 
         });
