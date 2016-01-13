@@ -47,7 +47,7 @@ slideShow.slideit('addControlPanel');
   * controlPanelBackground: '#777',
   * allowDelayChange : true, //displays timer change function if control panel shown
   * delay: 2000,
-  * delayText:'Enter delay between cards in seconds',
+  * delayText:'Enter delay between slides in seconds',
   * ok:'Ok',
   * selector:'' // if there are only specific children to the container you wish to target, add the selector to this option
   * slideHide:'fadeOut',
