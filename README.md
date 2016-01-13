@@ -13,9 +13,11 @@ To use default settings, simply markup your slideshow with a container tag, and 
  </div> 
 ```
 
-Note, the plugin will absolutely position the slides within the slide container. This in turn means that unless you have explicitly specified a height for the container, the container will have a height of 0 (assuming no other children within the container).
+**SLIDES CONTAINER HEIGHT**
+Note, the plugin will absolutely position the slides within the slide container. This in turn means that unless you have explicitly specified a height for the container, the container will have a height of 0 (assuming no other children within the container). If you wish the plugin to make an attempt at fixing the container height for you, then either run the setContainerHeight() method, or set the setContainerHeight option to true.
  
- Then use jquery to select the container passing it to the slideit function, e.g. 
+**START UP**
+ Use jquery to select the container passing it to the slideit function, e.g. 
  
  ```JavaScript
  var slideShow = $('#slides-container').slideit();
@@ -29,6 +31,7 @@ slideShow.slideit('restart');
 ```
 
 or
+
 ```JavaScript
 slideShow.slideit('option','controlPanelBackground','#754');
 slideShow.slideit('removeControlPanel'); //required if a control panel was already available
@@ -37,6 +40,7 @@ slideShow.slideit('addControlPanel');
 
 Options (with default):
   * autoplay:true,
+  * setContainerHeight: false,
   * controlPanel: false,
   * controlPanelBackground: '#777',
   * allowDelayChange : true, //displays timer change function if control panel shown
@@ -54,6 +58,7 @@ Methods:
   * playToggle(),
   * addControlPanel(),
   * removeControlPanel(),
-  * restart()
+  * restart(),
+  * setContainerHeight()
   
-There are no events associated with this plugin. However, events can be added if requested.
+There are no events associated with this plugin. However, events can be added if they are requested.
