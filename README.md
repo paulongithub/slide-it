@@ -1,9 +1,9 @@
 # slide-it
 A jquery widget plugin providing configurable slideshow functionality.
 
-Depends on jquery (tested with 1.11.2) and the jquery-ui widget (tested with 1.11.4) component. jQuery.Widget can be downloaded on its own. This plugin works exactly as all other jQuery widgets. It has options and methods.
+Depends on jquery (tested with 1.11.2) and the jquery-ui widget (tested with 1.11.4) component. jQuery.Widget can be downloaded on its own from the jquery ui download builder: http://jqueryui.com/download/. This plugin works exactly as all other jQuery widgets. It has options and methods.
 
-To use default settings, simply markup your slideshow with a container tag, and the slides as immediate children to that container. e.g. 
+To use, simply markup your slideshow with a container tag, and the slides as immediate children to that container. e.g. 
 
 ```HTML
  <div id=slides-container>
@@ -38,7 +38,7 @@ slideShow.slideit('removeControlPanel'); //required if a control panel was alrea
 slideShow.slideit('addControlPanel');
 ```
 
-Options (with default):
+**Options (with default):**
   * autoplay:true,
   * setContainerHeight: false,
   * controlPanel: false,
@@ -52,7 +52,7 @@ Options (with default):
   * slideShow:'fadeIn',
   * slideChangeTime:1000
   
-Methods:
+**Methods:**
   * play(),
   * pause(),
   * playToggle(),
