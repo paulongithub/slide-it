@@ -1,22 +1,24 @@
 # slide-it
 A jquery widget plugin providing configurable slideshow functionality.
 
-Depends on jquery and the jquery-ui widget component. jQuery.Widget can be downloaded on its own. This plugin works exactly as all other jQuery widgets. It has options and methods.
+Depends on jquery (tested with 1.11.2) and the jquery-ui widget (tested with 1.11.4) component. jQuery.Widget can be downloaded on its own. This plugin works exactly as all other jQuery widgets. It has options and methods.
 
 To use default settings, simply markup your slideshow with a container tag, and the slides as immediate children to that container. e.g. 
 
 ```HTML
- <div id=slide-parent>
-   <div class=child-slide></div>
-   <div class=child-slide></div>
-   <div class=child-slide></div>
+ <div id=slides-container>
+   <div class=slide></div>
+   <div class=slide></div>
+   <div class=slide></div>
  </div> 
 ```
+
+Note, the plugin will absolutely position the slides within the slide container. This in turn means that unless you have explicitly specified a height for the container, the container will have a height of 0 (assuming no other children within the container).
  
  Then use jquery to select the container passing it to the slideit function, e.g. 
  
  ```JavaScript
- var slideShow = $('#slide-parent').slideit();
+ var slideShow = $('#slides-container').slideit();
 ```
 
 It's best to set all options upfront, ie pass in an options object to slideit() on initialisation. Otherwise you may have to call a function or functions for the change to take effect, e.g.:
