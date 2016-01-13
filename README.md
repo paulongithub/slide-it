@@ -3,7 +3,7 @@ A jquery widget plugin providing configurable slideshow functionality.
 
 Depends on jquery (tested with 1.11.2) and the jquery-ui widget (tested with 1.11.4) component. jQuery.Widget can be downloaded on its own from the jquery ui download builder: http://jqueryui.com/download/. This plugin works exactly as all other jQuery widgets. It has options and methods.
 
-To use, simply markup your slideshow with a container tag, and the slides as immediate children to that container. e.g. 
+To use, simply markup your slideshow with a container tag, and the slides as immediate children to that container. The names and classes below are examples only, and don't affect function. That said, you will need to be able to precisely select the container though - see START UP below.
 
 ```HTML
  <div id=slides-container>
