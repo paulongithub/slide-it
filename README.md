@@ -14,9 +14,11 @@ To use, simply markup your slideshow with a container tag, and the slides as imm
 ```
 
 **SLIDES CONTAINER HEIGHT**
+
 Note, the plugin will absolutely position the slides within the slide container. This in turn means that unless you have explicitly specified a height for the container, the container will have a height of 0 (assuming no other children within the container). If you wish the plugin to make an attempt at fixing the container height for you, then either run the setContainerHeight() method, or set the setContainerHeight option to true.
  
 **START UP**
+
  Use jquery to select the container passing it to the slideit function, e.g. 
  
  ```JavaScript
